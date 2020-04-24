@@ -1,4 +1,3 @@
-import com.pluralsight.model.Speaker;
 import com.pluralsight.repository.HibernateSpeakerRepositoryImpl;
 import com.pluralsight.repository.SpeakerRepository;
 import com.pluralsight.service.SpeakerService;
@@ -11,8 +10,7 @@ public class AppConfig {
 
     @Bean(name = "speakerService")
     public SpeakerService getSpeakerService() {
-        SpeakerServiceImpl service = new SpeakerServiceImpl();
-        service.setRepository(getSpeakerRepository());
+        SpeakerServiceImpl service = new SpeakerServiceImpl(getSpeakerRepository());
         return service;
     }
 
@@ -20,4 +18,5 @@ public class AppConfig {
     public SpeakerRepository getSpeakerRepository() {
         return new HibernateSpeakerRepositoryImpl();
     }
+    
 }
