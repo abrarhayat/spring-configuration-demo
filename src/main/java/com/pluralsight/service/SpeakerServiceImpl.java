@@ -4,6 +4,7 @@ import com.pluralsight.model.Speaker;
 import com.pluralsight.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Service("speakerService")
+@Profile("dev")
 @Scope(value = BeanDefinition.SCOPE_SINGLETON)
 public class SpeakerServiceImpl implements SpeakerService {
 
