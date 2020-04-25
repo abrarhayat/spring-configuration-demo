@@ -23,7 +23,7 @@ public class SpeakerServiceImpl implements SpeakerService {
         return repository.findAll();
     }
 
-    public void setSpeakerRepository(SpeakerRepository repository) {
+    public void setRepository(SpeakerRepository repository) {
         this.repository = repository;
     }
 }
