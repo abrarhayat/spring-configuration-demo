@@ -6,9 +6,9 @@
 
     <bean name="speakerRepository"
           class="com.pluralsight.repository.HibernateSpeakerRepositoryImpl"/>
-    <!--Since autowiring is done byType, the name of the setter method in SpeakerServiceImpl does NOT matter-->
+    <!--Since autowiring is done byName, the name of the setter method in SpeakerServiceImpl DOES matter-->
     <bean name="speakerService"
-          class="com.pluralsight.service.SpeakerServiceImpl" autowire="byType">
+          class="com.pluralsight.service.SpeakerServiceImpl" autowire="byName">
         <!--<constructor-arg index="0" ref="speakerRepository"/>-->
     </bean>
 
