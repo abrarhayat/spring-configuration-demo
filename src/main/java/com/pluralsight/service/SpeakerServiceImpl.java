@@ -14,6 +14,7 @@ public class SpeakerServiceImpl implements SpeakerService {
     }
 
     public SpeakerServiceImpl(SpeakerRepository repository) {
+        System.out.println("From repository constructor");
         this.repository = repository;
     }
 
