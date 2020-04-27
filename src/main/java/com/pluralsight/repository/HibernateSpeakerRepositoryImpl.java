@@ -13,7 +13,7 @@ import java.util.Calendar;
 import java.util.List;
 
 @Repository("speakerRepository")
-@Profile("dev")
+//@Profile("dev")
 @Scope(value = BeanDefinition.SCOPE_SINGLETON)
 public class HibernateSpeakerRepositoryImpl implements SpeakerRepository {
 
